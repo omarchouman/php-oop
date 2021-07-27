@@ -1,0 +1,13 @@
+{
+    "name": "omarchouman/php-oop",
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Omar Chouman",
+            "email": "omar.chouman0@gmail.com"
+        }
+    ],
+    "require": {}
+}
