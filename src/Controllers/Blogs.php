@@ -46,7 +46,7 @@ class Blogs
       if (empty($data['title_err']) && empty($data['overview_err']) && empty($data['content_err'])) {
         // Add blog
         if ($this->Blog->addBlog($data, $user)) {
-          $data['msg'] = 'Blog was added successfully';
+          $data['msg'] = 'Blog Added Successfully';
           $data['title'] = '';
           $data['overview'] = '';
           $data['content'] = '';
@@ -99,7 +99,7 @@ class Blogs
       if (empty($data['title_err']) && empty($data['overview_err']) && empty($data['content_err'])) {
         // Add blog
         if ($this->Blog->updateBlog($data, $blog)) {
-          $data['msg'] = 'Blog was updated successfully';
+          $data['msg'] = 'Blog Updated Successfully';
           return [
             'success' => true,
             'data' => $data
