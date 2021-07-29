@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Login page for admins. Here you can signin to your account to access your own dashboard">
-  <title>Login Page | Admin's Dashboard Login</title>
+  <title>Login Page</title>
   <link rel="stylesheet" href="register.css">
 </head>
 

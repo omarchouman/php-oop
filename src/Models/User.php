@@ -13,6 +13,7 @@ class User
     $this->db = new DB();
   }
 
+  // register user
   public function register($data)
   {
     $this->db->query('INSERT INTO user (email, username, password) VALUES(:email, :username, :password)');
@@ -28,6 +29,7 @@ class User
     }
   }
 
+  // login user by email
   public function loginEmail($data)
   {
     $this->db->query('SELECT * FROM user WHERE email = :email');
@@ -50,6 +52,7 @@ class User
     }
   }
 
+  // login user by username
   public function loginUsername($data)
   {
     $this->db->query('SELECT * FROM user WHERE username = :username');
@@ -72,6 +75,10 @@ class User
     }
   }
 
+
+
+
+  // Find user by email
   public function findUserByEmail($email)
   {
     $this->db->query('SELECT * FROM user WHERE email = :email');
@@ -86,6 +93,7 @@ class User
     }
   }
 
+  // Find user by username
   public function findUserByUsername($username)
   {
     $this->db->query('SELECT * FROM user WHERE username = :username');

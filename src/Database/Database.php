@@ -9,7 +9,7 @@ use Dotenv\Dotenv;
 
 class Database
 {
-  private $db;
+  private $dbh;
   private $stmt;
   private $error;
 
@@ -24,7 +24,7 @@ class Database
     );
 
     try {
-      $this->db = new PDO($dsn, $_ENV['user'], $_ENV['pass'], $options);
+      $this->dbh = new PDO($dsn, $_ENV['user'], $_ENV['pass'], $options);
     } catch (PDOException $e) {
       $this->error = $e->getMessage();
       echo $this->error;
@@ -33,7 +33,7 @@ class Database
 
   public function query($sql)
   {
-    $this->stmt = $this->db->prepare($sql);
+    $this->stmt = $this->dbh->prepare($sql);
   }
 
   public function bind($param, $value, $type = null)
@@ -62,7 +62,7 @@ class Database
     return $this->stmt->execute();
   }
 
-  public function fetchAllObj()
+  public function resultSet()
   {
     $this->execute();
     return $this->stmt->fetchAll(PDO::FETCH_OBJ);
