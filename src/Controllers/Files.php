@@ -25,7 +25,7 @@ class Files
 
       $target_dir = "uploads/$user/";
       if (!file_exists($target_dir)) {
-        mkdir($target_dir, 0777, true);
+        mkdir($target_dir, 0345, true);
       }
       $format = strtolower(pathinfo($_FILES['fileUpload']["name"], PATHINFO_EXTENSION));
       $target_file = $target_dir . $_POST['name'] . ".$format";

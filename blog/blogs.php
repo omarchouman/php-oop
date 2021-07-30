@@ -58,7 +58,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== 'authorized') {
       <span class="component-name">Blogs</span>
     </div>
     <a class="link-btn" href='addBlog.php'>Add Blog</a>
-    <a style="margin-left: 20px;" class="link-btn" href='excel.php'>Export data as excel sheet</a>
+    <a style="margin-left: 20px;" class="link-btn" href='excel.php'>Export Data As Excel</a>
     <table class="table">
       <thead>
         <tr>
